@@ -1,26 +1,22 @@
-spring:
-  profiles:
-    active: dev
----
-spring:
-  profiles: dev
-  application:
-    name: zuul
 server:
-  port: 6001
+  port: 10086
+
+spring:
+  profiles: Eureka
+
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:10086/eureka,http://localhost:10087/eureka
+      defaultZone: http://localhost:10086/eureka
 ---
+server:
+  port: 8081
+
 spring:
   profiles: test
-  application:
-    name: zuul
-server:
-  port: 6002
+
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:10086/eureka,http://localhost:10087/eureka
+      defaultZone: http://localhost:10086/eureka
   

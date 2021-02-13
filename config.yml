@@ -3,22 +3,15 @@ server:
 
 spring:
   profiles: Eureka
-  application: 
+  application:
     name: Eureka-10086
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:10086/eureka
+    register-with-eureka: false   #不注册自己
+    fetch-registry: false   #自己为注册中心
 ---
-server:
-  port: 8081
 
-spring:
-  profiles: test
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:10086/eureka
   

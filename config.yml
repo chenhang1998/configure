@@ -3,6 +3,8 @@ server:
 
 spring:
   profiles: Eureka
+  application: 
+    name: Eureka-10086
 
 eureka:
   client:
